@@ -35,8 +35,6 @@ C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouse
 C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Release\net6.0-windows\win-x64\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Release\net6.0-windows\win-x64\Microsoft.Extensions.Options.dll
 C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Release\net6.0-windows\win-x64\Microsoft.Extensions.Primitives.dll
-C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Release\net6.0-windows\win-x64\MySqlConnector.dll
-C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Release\net6.0-windows\win-x64\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Release\net6.0-windows\win-x64\QuestPDF.dll
 C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Release\net6.0-windows\win-x64\System.Runtime.CompilerServices.Unsafe.dll
 C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Release\net6.0-windows\win-x64\QuestPdfSkia.dll
@@ -578,3 +576,15 @@ C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouse
 C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\obj\Release\net6.0-windows\win-x64\UniaWarehouseManagementSystem.pdb
 C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\obj\Release\net6.0-windows\win-x64\UniaWarehouseManagementSystem.genruntimeconfig.cache
 C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\obj\Release\net6.0-windows\win-x64\ref\UniaWarehouseManagementSystem.dll
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Release\net6.0-windows\win-x64\Microsoft.Data.Sqlite.dll
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Release\net6.0-windows\win-x64\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Release\net6.0-windows\win-x64\Microsoft.Extensions.DependencyModel.dll
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Release\net6.0-windows\win-x64\SQLitePCLRaw.batteries_v2.dll
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Release\net6.0-windows\win-x64\SQLitePCLRaw.core.dll
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Release\net6.0-windows\win-x64\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Release\net6.0-windows\win-x64\e_sqlite3.dll
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\obj\Release\net6.0-windows\win-x64\WarehouseListWindow.g.cs
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\obj\Release\net6.0-windows\win-x64\WarehouseWindow.g.cs
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\obj\Release\net6.0-windows\win-x64\WarehouseListWindow.baml
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\obj\Release\net6.0-windows\win-x64\WarehouseWindow.baml
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\obj\Release\net6.0-windows\win-x64\UniaWarehouseManagementSystem.sourcelink.json

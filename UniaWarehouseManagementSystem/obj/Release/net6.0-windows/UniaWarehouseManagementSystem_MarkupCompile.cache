@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET6_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\App.xaml
-9763032678
+11-639814283
 
-321650801438
-210-360344081
-ContractorWindow.xaml;DocumentWindow.xaml;HistoryWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ProductWindow.xaml;SettingsWindow.xaml;StatsWindow.xaml;UserWindow.xaml;
+361231201298
+2141383646628
+ContractorWindow.xaml;DocumentWindow.xaml;HistoryWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ProductWindow.xaml;SettingsWindow.xaml;StatsWindow.xaml;UserWindow.xaml;WarehouseListWindow.xaml;WarehouseWindow.xaml;
 
 False
 

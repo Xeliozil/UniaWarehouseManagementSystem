@@ -10,8 +10,9 @@ namespace UniaWarehouseManagementSystem.Data
         public DbSet<StockLevel> StockLevels { get; set; }
         public DbSet<Document> Documents { get; set; }
         public DbSet<DocumentItem> DocumentItems { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<CompanyInfo> CompanyInfos { get; set; }
 
-        // NOWE:
         public DbSet<Contractor> Contractors { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -19,7 +20,19 @@ namespace UniaWarehouseManagementSystem.Data
             var connectionString = "Server=localhost;Database=UniaDb;User=root;Password=;";
             optionsBuilder.UseSqlite("Data Source=UniaWarehouse.db");
         }
-        public DbSet<User> Users { get; set; }
-        public DbSet<CompanyInfo> CompanyInfos { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // To naprawia Twój b³¹d SQLite Error 1:
+            // Tworzymy unikalny indeks na parze (WarehouseId + ProductId).
+            // Dziêki temu baza wie, ¿e nie mo¿e byæ dwóch takich samych wpisów
+            // i zadzia³a klauzula ON CONFLICT.
+            modelBuilder.Entity<StockLevel>()
+                .HasIndex(sl => new { sl.WarehouseId, sl.ProductId })
+                .IsUnique();
+        }
+
     }
 }
