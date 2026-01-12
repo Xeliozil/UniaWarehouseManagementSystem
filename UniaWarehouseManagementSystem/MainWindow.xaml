@@ -69,6 +69,7 @@
                         <Button Content="➕ Produkt" Command="{Binding OpenAddProductCommand}" Margin="0,0,5,0" Padding="10,6" Background="#EEE"/>
                         <Button Content="✏️ Edytuj" Command="{Binding OpenEditProductCommand}" Margin="0,0,5,0" Padding="10,6" Background="#EEE"/>
                         <Button Content="👤 Kontrahent" Command="{Binding OpenNewContractorCommand}" Padding="10,6" Background="#EEE"/>
+                        <Button Content="🏭 Magazyny" Command="{Binding OpenWarehouseListCommand}" Margin="5,0,0,0" Padding="10,6" Background="#EEE" ToolTip="Zarządzaj listą magazynów"/>
                     </StackPanel>
                 </Border>
 

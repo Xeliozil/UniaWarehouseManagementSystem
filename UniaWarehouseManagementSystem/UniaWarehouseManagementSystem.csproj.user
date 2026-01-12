@@ -28,5 +28,11 @@
     <Compile Update="UserWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="WarehouseListWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WarehouseWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

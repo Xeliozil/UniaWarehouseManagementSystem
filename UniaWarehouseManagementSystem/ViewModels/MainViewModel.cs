@@ -329,5 +329,30 @@ namespace UniaWarehouseManagementSystem.ViewModels
                 MessageBox.Show($"B³¹d importu: {ex.Message}", "B³¹d", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+        [RelayCommand]
+        private void AddWarehouse()
+        {
+            var vm = new WarehouseEditorViewModel();
+            var win = new WarehouseWindow(vm);
+            win.ShowDialog();
+            // Tutaj warto dodaæ odœwie¿enie listy magazynów, np. LoadWarehouses();
+        }
+
+        [RelayCommand]
+        private void EditWarehouse(Warehouse warehouse)
+        {
+            if (warehouse == null) return;
+
+            var vm = new WarehouseEditorViewModel(warehouse);
+            var win = new WarehouseWindow(vm);
+            win.ShowDialog();
+            // Tutaj warto dodaæ odœwie¿enie listy magazynów
+        }
+        [RelayCommand]
+        private void OpenWarehouseList()
+        {
+            var window = new WarehouseListWindow();
+            window.Show(); // U¿ywamy Show(), ¿eby g³ówne okno nadal by³o dostêpne w tle
+        }
     }
 }

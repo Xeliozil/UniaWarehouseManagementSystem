@@ -126,3 +126,8 @@ C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouse
 C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Debug\net6.0-windows\runtimes\win-x64\native\e_sqlite3.dll
 C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Debug\net6.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\obj\Debug\net6.0-windows\WarehouseWindow.g.cs
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\obj\Debug\net6.0-windows\WarehouseWindow.baml
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\obj\Debug\net6.0-windows\UniaWarehouseManagementSystem.sourcelink.json
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\obj\Debug\net6.0-windows\WarehouseListWindow.g.cs
+C:\Dev\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\UniaWarehouseManagementSystem\obj\Debug\net6.0-windows\WarehouseListWindow.baml

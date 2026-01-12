@@ -1,0 +1,52 @@
+﻿<Window x:Class="UniaWarehouseManagementSystem.WarehouseListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:UniaWarehouseManagementSystem.ViewModels"
+        mc:Ignorable="d"
+        Title="Zarządzanie Magazynami" Height="450" Width="600"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.DataContext>
+        <vm:WarehouseListViewModel/>
+    </Window.DataContext>
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" 
+                Content="+ Dodaj Nowy Magazyn" 
+                Command="{Binding AddWarehouseCommand}"
+                HorizontalAlignment="Left"
+                Padding="15,8" Margin="0,0,0,10"
+                Background="#28a745" Foreground="White" FontWeight="Bold"/>
+
+        <DataGrid Grid.Row="1" 
+                  ItemsSource="{Binding Warehouses}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  HeadersVisibility="Column"
+                  BorderBrush="#DDD" BorderThickness="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Nazwa" Binding="{Binding Name}" Width="150" FontWeight="Bold"/>
+                <DataGridTextColumn Header="Opis" Binding="{Binding Description}" Width="*"/>
+
+                <DataGridTemplateColumn Header="Akcje" Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Edytuj" 
+                                    Command="{Binding DataContext.EditWarehouseCommand, RelativeSource={RelativeSource AncestorType=Window}}" 
+                                    CommandParameter="{Binding}"
+                                    Margin="2"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

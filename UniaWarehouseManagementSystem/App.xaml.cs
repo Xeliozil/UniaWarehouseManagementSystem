@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Windows;
 using UniaWarehouseManagementSystem.Models;
 using UniaWarehouseManagementSystem.Services;
 using UniaWarehouseManagementSystem.ViewModels;
@@ -44,6 +45,47 @@ namespace UniaWarehouseManagementSystem
                             });
                         }
                         context.SaveChanges();
+                    }
+                    // --- DODAJ TO: Ręczne tworzenie triggera dla SQLite ---
+                    // SQLite wymaga nieco innej składni niż MySQL (brak IF/ELSEIF wewnątrz triggera w prosty sposób,
+                    // często robi się oddzielne triggery lub używa składni CASE/WHEN w UPDATE).
+                    // Poniżej uproszczona wersja, która powinna zadziałać dla SQLite:
+
+                    try
+                    {
+                        // Trigger dla PZ (Przyjęcie Zewnętrzne) - zwiększa stan
+                        context.Database.ExecuteSqlRaw(@"
+                            CREATE TRIGGER IF NOT EXISTS After_DocumentItem_Insert_PZ
+                            AFTER INSERT ON DocumentItems
+                            WHEN (SELECT DocType FROM Documents WHERE Id = NEW.DocumentId) = 'PZ'
+                            BEGIN
+                                INSERT INTO StockLevels (WarehouseId, ProductId, Quantity)
+                                SELECT TargetWarehouseId, NEW.ProductId, NEW.Quantity
+                                FROM Documents WHERE Id = NEW.DocumentId
+                                ON CONFLICT(WarehouseId, ProductId) DO UPDATE SET Quantity = Quantity + NEW.Quantity;
+                            END;
+                        ");
+
+                        // Trigger dla WZ (Wydanie Zewnętrzne) - zmniejsza stan
+                        context.Database.ExecuteSqlRaw(@"
+                            CREATE TRIGGER IF NOT EXISTS After_DocumentItem_Insert_WZ
+                            AFTER INSERT ON DocumentItems
+                            WHEN (SELECT DocType FROM Documents WHERE Id = NEW.DocumentId) = 'WZ'
+                            BEGIN
+                                UPDATE StockLevels 
+                                SET Quantity = Quantity - NEW.Quantity
+                                WHERE ProductId = NEW.ProductId 
+                                AND WarehouseId = (SELECT SourceWarehouseId FROM Documents WHERE Id = NEW.DocumentId);
+                            END;
+                        ");
+
+                        // Trigger dla MM (Przesunięcie) - wymagałby bardziej złożonej logiki, 
+                        // w SQLite lepiej obsłużyć MM w kodzie C# lub rozbić na dwa operacje (zdejmij/dodaj).
+                    }
+                    catch (System.Exception ex)
+                    {
+                        // Ignorujemy błędy jeśli triggery już istnieją lub coś poszło nie tak
+                        System.Diagnostics.Debug.WriteLine("Błąd tworzenia triggerów: " + ex.Message);
                     }
                 }
 
