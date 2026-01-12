@@ -37,22 +37,30 @@ namespace UniaWarehouseManagementSystem.ViewModels
         [ObservableProperty]
         private string _searchText = "";
 
+        // Rêczne definicje w³aœciwoœci, aby unikn¹æ b³êdów CS0200 przy przypisywaniu
+        private Visibility _adminVisibility = Visibility.Collapsed;
+        public Visibility AdminVisibility
+        {
+            get => _adminVisibility;
+            set => SetProperty(ref _adminVisibility, value);
+        }
+
+        private string _currentUserInfo = "";
+        public string CurrentUserInfo
+        {
+            get => _currentUserInfo;
+            set => SetProperty(ref _currentUserInfo, value);
+        }
+
         partial void OnSearchTextChanged(string value)
         {
             ApplyFilter();
         }
 
-        public Visibility AdminVisibility =>
-            AuthService.CurrentUser?.Role == "Admin" ? Visibility.Visible : Visibility.Collapsed;
-
-        public string CurrentUserInfo =>
-            $"Zalogowany: {AuthService.CurrentUser?.Username} ({AuthService.CurrentUser?.Role})";
-
         // --- 2. KONSTRUKTOR ---
         public MainViewModel()
         {
             ProductsList = new ObservableCollection<Product>();
-            // Wywo³ujemy metodê LoadData (bez czekania w konstruktorze)
             _ = LoadData();
         }
 
@@ -76,61 +84,43 @@ namespace UniaWarehouseManagementSystem.ViewModels
             foreach (var item in filtered) ProductsList.Add(item);
         }
 
-        // --- JEDYNA I G£ÓWNA METODA £ADOWANIA DANYCH ---
         [RelayCommand]
-        private async Task LoadData()
+        public async Task LoadData()
         {
             StatusMessage = "£adowanie danych...";
             try
             {
                 using (var context = new UniaDbContext())
                 {
-                    // 1. Pobieramy produkty
-                    var products = await context.Products.ToListAsync();
+                    // Pobieramy produkty WRAZ z ich stanami (Include)
+                    var list = await context.Products
+                                            .Include(p => p.StockLevels)
+                                            .ToListAsync();
 
-                    // 2. Pobieramy historiê ruchów (Dok³adnie tak jak w Dashboardzie)
-                    // U¿ywamy AsNoTracking dla wydajnoœci
-                    var items = await context.DocumentItems
-                                             .Include(i => i.Document)
-                                             .AsNoTracking()
-                                             .ToListAsync();
+                    _allProductsCache = list;
 
-                    // 3. Obliczamy stan dla ka¿dego produktu (PZ - WZ)
-                    foreach (var p in products)
-                    {
-                        // Przychody (PZ, PW, MM)
-                        var income = items
-                            .Where(i => i.ProductId == p.Id &&
-                                       (i.Document.DocType == "PZ" || i.Document.DocType == "PW" || i.Document.DocType == "MM"))
-                            .Sum(i => i.Quantity);
+                    // Aktualizacja widocznoœci Admina
+                    AdminVisibility = AuthService.CurrentUser?.Role == "Admin"
+                        ? Visibility.Visible
+                        : Visibility.Collapsed;
 
-                        // Rozchody (WZ, RW)
-                        var outcome = items
-                            .Where(i => i.ProductId == p.Id &&
-                                       (i.Document.DocType == "WZ" || i.Document.DocType == "RW"))
-                            .Sum(i => i.Quantity);
-
-                        // Wpisujemy wyliczony stan do obiektu (to zobaczy tabela)
-                        p.TotalQuantity = income - outcome;
-                    }
-
-                    // 4. Aktualizujemy cache (wa¿ne dla wyszukiwarki!)
-                    _allProductsCache.Clear();
-                    _allProductsCache.AddRange(products);
+                    // Aktualizacja informacji o u¿ytkowniku
+                    CurrentUserInfo = AuthService.CurrentUser != null
+                        ? $"Zalogowany: {AuthService.CurrentUser.Username} ({AuthService.CurrentUser.Role})"
+                        : "Niezalogowany";
                 }
 
-                // Odœwie¿amy widok
                 ApplyFilter();
                 StatusMessage = $"Za³adowano {_allProductsCache.Count} produktów.";
             }
             catch (Exception ex)
             {
-                StatusMessage = "B³¹d: " + ex.Message;
-                MessageBox.Show("B³¹d bazy danych: " + ex.Message);
+                StatusMessage = "B³¹d pobierania danych.";
+                MessageBox.Show(ex.Message);
             }
         }
 
-        // --- 4. KOMENDY (PRZYCISKI) ---
+        // --- 4. KOMENDY ---
 
         [RelayCommand]
         private void OpenAddProduct()
@@ -268,9 +258,7 @@ namespace UniaWarehouseManagementSystem.ViewModels
             if (dialog.ShowDialog() != true) return;
 
             string filePath = dialog.FileName;
-            int added = 0;
-            int updated = 0;
-            int errors = 0;
+            int added = 0, updated = 0, errors = 0;
 
             try
             {
@@ -296,15 +284,14 @@ namespace UniaWarehouseManagementSystem.ViewModels
 
                         if (existingProduct == null)
                         {
-                            var newProd = new Product
+                            context.Products.Add(new Product
                             {
                                 Code = code,
                                 Name = name,
                                 Unit = unit,
-                                MinStock = minStock,
-                                TotalQuantity = 0
-                            };
-                            context.Products.Add(newProd);
+                                MinStock = minStock
+                                // NIE PRZYPISUJEMY TotalQuantity - wyliczy siê z relacji
+                            });
                             added++;
                         }
                         else
@@ -317,42 +304,39 @@ namespace UniaWarehouseManagementSystem.ViewModels
                     }
                     await context.SaveChangesAsync();
                 }
-
-                // Tutaj wo³amy nasz¹ naprawion¹ metodê LoadData
                 await LoadData();
-
-                MessageBox.Show($"Zakoñczono import!\n\nDodano: {added}\nZaktualizowano: {updated}\nB³êdy: {errors}",
-                                "Import CSV", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show($"Zakoñczono import!\n\nDodano: {added}\nZaktualizowano: {updated}\nB³êdy: {errors}", "Import CSV", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"B³¹d importu: {ex.Message}", "B³¹d", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
         [RelayCommand]
         private void AddWarehouse()
         {
             var vm = new WarehouseEditorViewModel();
             var win = new WarehouseWindow(vm);
             win.ShowDialog();
-            // Tutaj warto dodaæ odœwie¿enie listy magazynów, np. LoadWarehouses();
+            _ = LoadData();
         }
 
         [RelayCommand]
         private void EditWarehouse(Warehouse warehouse)
         {
             if (warehouse == null) return;
-
             var vm = new WarehouseEditorViewModel(warehouse);
             var win = new WarehouseWindow(vm);
             win.ShowDialog();
-            // Tutaj warto dodaæ odœwie¿enie listy magazynów
+            _ = LoadData();
         }
+
         [RelayCommand]
         private void OpenWarehouseList()
         {
             var window = new WarehouseListWindow();
-            window.Show(); // U¿ywamy Show(), ¿eby g³ówne okno nadal by³o dostêpne w tle
+            window.Show();
         }
     }
 }

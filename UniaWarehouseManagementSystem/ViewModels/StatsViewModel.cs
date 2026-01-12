@@ -2,7 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using UniaWarehouseManagementSystem.Data;
 using UniaWarehouseManagementSystem.Models;
 
@@ -10,75 +12,58 @@ namespace UniaWarehouseManagementSystem.ViewModels
 {
     public partial class StatsViewModel : ObservableObject
     {
-        // --- 1. KAFELKI ---
         [ObservableProperty] private int _lowStockCount;
         [ObservableProperty] private int _totalProductsCount;
         [ObservableProperty] private decimal _totalStockSum;
         [ObservableProperty] private int _docsThisMonth;
 
-        // --- 2. LISTA BRAKÓW ---
         [ObservableProperty] private ObservableCollection<Product> _lowStockProducts;
 
         public StatsViewModel()
         {
             LowStockProducts = new ObservableCollection<Product>();
-            CalculateStats();
+            _ = CalculateStats(); // Uruchamiamy asynchronicznie
         }
 
-        private async void CalculateStats()
+        private async Task CalculateStats()
         {
-            using (var context = new UniaDbContext())
+            try
             {
-                // 1. Pobieramy produkty i historię ruchów (DocumentItems)
-                // Używamy AsNoTracking dla szybkości
-                var allProducts = await context.Products.AsNoTracking().ToListAsync();
-                var allItems = await context.DocumentItems
-                                            .Include(i => i.Document)
-                                            .AsNoTracking()
-                                            .ToListAsync();
-
-                // 2. PRZELICZAMY PRAWDZIWY STAN (PZ - WZ)
-                foreach (var p in allProducts)
+                using (var context = new UniaDbContext())
                 {
-                    // Suma przychodów (PZ, PW, MM+)
-                    var income = allItems
-                        .Where(i => i.ProductId == p.Id &&
-                                   (i.Document.DocType == "PZ" || i.Document.DocType == "PW" || i.Document.DocType == "MM"))
-                        .Sum(i => i.Quantity);
+                    // 1. Pobieramy produkty WRAZ z ich stanami (Include)
+                    // Nie potrzebujemy już pobierać allItems i liczyć ręcznie!
+                    var allProducts = await context.Products
+                        .Include(p => p.StockLevels)
+                        .AsNoTracking()
+                        .ToListAsync();
 
-                    // Suma rozchodów (WZ, RW)
-                    // Uwaga: MM traktujemy specyficznie, tu dla uproszczenia zakładam, że MM to przesunięcie wewnętrzne, 
-                    // ale jeśli MM zmniejsza stan magazynu źródłowego, trzeba by to uwzględnić. 
-                    // W prostym modelu PZ/WZ skupmy się na nich:
-                    var outcome = allItems
-                        .Where(i => i.ProductId == p.Id &&
-                                   (i.Document.DocType == "WZ" || i.Document.DocType == "RW"))
-                        .Sum(i => i.Quantity);
+                    // 2. Obliczamy statystyki
+                    // Właściwość TotalQuantity wyliczy się sama w modelu Product
+                    TotalProductsCount = allProducts.Count;
+                    TotalStockSum = allProducts.Sum(p => p.TotalQuantity);
 
-                    // Nadpisujemy stan w pamięci (to naprawi widok)
-                    p.TotalQuantity = income - outcome;
+                    // 3. Alarmy: Filtrujemy produkty z niskim stanem
+                    var alerts = allProducts
+                        .Where(p => p.MinStock > 0 && p.TotalQuantity < p.MinStock)
+                        .ToList();
+
+                    LowStockCount = alerts.Count;
+
+                    // Odświeżamy listę braków na widoku
+                    LowStockProducts.Clear();
+                    foreach (var p in alerts) LowStockProducts.Add(p);
+
+                    // 4. Dokumenty z tego miesiąca
+                    var startOfMonth = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+                    DocsThisMonth = await context.Documents
+                        .Where(d => d.DocDate >= startOfMonth)
+                        .CountAsync();
                 }
-
-                // 3. Obliczamy statystyki na podstawie przeliczonych danych
-                TotalProductsCount = allProducts.Count;
-                TotalStockSum = allProducts.Sum(p => p.TotalQuantity);
-
-                // Alarmy: Tylko tam, gdzie stan jest mniejszy od minimum (i minimum jest ustawione > 0)
-                // Dodaliśmy warunek p.MinStock > 0, żeby nie pokazywało śmieci, jeśli ktoś nie ustawił minimum.
-                var alerts = allProducts
-                    .Where(p => p.MinStock > 0 && p.TotalQuantity < p.MinStock)
-                    .ToList();
-
-                LowStockCount = alerts.Count;
-
-                LowStockProducts.Clear();
-                foreach (var p in alerts) LowStockProducts.Add(p);
-
-                // 4. Dokumenty z tego miesiąca
-                var startOfMonth = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
-                DocsThisMonth = await context.Documents
-                    .Where(d => d.DocDate >= startOfMonth)
-                    .CountAsync();
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Błąd statystyk: " + ex.Message);
             }
         }
     }
