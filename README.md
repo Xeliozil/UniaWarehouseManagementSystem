@@ -120,6 +120,18 @@ System generuje pliki PDF bezpośrednio na **Pulpit** użytkownika. Dostępne s�
 
 ---
 
-## 📜 Licencja
+## ⚖️ Licencjonowanie i Pakiety NuGet
 
-Projekt jest dostępny na licencji [Nazwa Licencji, np. MIT], patrz plik LICENSE po szczegóły.
+Projekt wykorzystuje biblioteki open-source na następujących licencjach:
+
+### [CommunityToolkit.Mvvm](https://www.nuget.org/packages/CommunityToolkit.Mvvm) (v8.4.0)
+* **Zastosowanie**: Obsługa wzorca MVVM, automatyczna generacja powiadomień i komend.
+* **Licencja**: **MIT** (Darmowa do użytku prywatnego i komercyjnego).
+
+### [Microsoft.EntityFrameworkCore.Sqlite](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite) (v7.0.20)
+* **Zastosowanie**: ORM i obsługa połączenia z bazą danych SQLite.
+* **Licencja**: **MIT** (Darmowa).
+
+### [QuestPDF](https://www.nuget.org/packages/QuestPDF) (v2025.12.1)
+* **Zastosowanie**: Silnik generowania dokumentów PDF.
+* **Licencja**: **QuestPDF Community License** (Darmowa dla osób prywatnych i mniejszych podmiotów).
