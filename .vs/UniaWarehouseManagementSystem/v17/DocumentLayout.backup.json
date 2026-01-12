@@ -1,0 +1,621 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\models\\warehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\models\\warehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\viewmodels\\documenteditorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\viewmodels\\documenteditorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\data\\uniadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\data\\uniadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\contractorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\contractorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\models\\companyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\models\\companyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\historywindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\historywindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\viewmodels\\historyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\viewmodels\\historyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\viewmodels\\statsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\viewmodels\\statsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\statswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\statswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\viewmodels\\settingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\viewmodels\\settingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\services\\pdfgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\services\\pdfgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\userwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\userwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\viewmodels\\usereditorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\viewmodels\\usereditorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\models\\documentitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\models\\documentitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\documentwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\documentwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\viewmodels\\contractoreditorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\viewmodels\\contractoreditorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\models\\contractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\models\\contractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\productwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\productwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\productwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\productwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\viewmodels\\producteditorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\viewmodels\\producteditorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\documentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\documentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\models\\stocklevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\models\\stocklevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|c:\\dev\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem\\uniawarehousemanagementsystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BD671239-3E70-408D-A783-6A4D66C2E646}|UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj|solutionrelative:uniawarehousemanagementsystem\\uniawarehousemanagementsystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DocumentEditorViewModel.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\DocumentEditorViewModel.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\ViewModels\\DocumentEditorViewModel.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\DocumentEditorViewModel.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\ViewModels\\DocumentEditorViewModel.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAADwv4IAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T12:41:39.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\App.xaml",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\App.xaml",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\App.xaml",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-12T13:36:52.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\App.xaml.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\App.xaml.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\App.xaml.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\App.xaml.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAADwv4cAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T13:36:56.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Warehouse.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\Warehouse.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\Models\\Warehouse.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\Warehouse.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\Models\\Warehouse.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T12:17:41.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UniaDbContext.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Data\\UniaDbContext.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\Data\\UniaDbContext.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Data\\UniaDbContext.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\Data\\UniaDbContext.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBMAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T12:18:09.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\LoginWindow.xaml",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\LoginWindow.xaml",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-12T14:11:55.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HistoryWindow.xaml",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\HistoryWindow.xaml",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\HistoryWindow.xaml",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\HistoryWindow.xaml",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\HistoryWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-12T13:50:12.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAADwv4IAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T12:18:23.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\MainWindow.xaml",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\MainWindow.xaml",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-12T11:57:03.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CompanyInfo.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\CompanyInfo.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\Models\\CompanyInfo.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\CompanyInfo.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\Models\\CompanyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T14:35:40.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HistoryViewModel.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\HistoryViewModel.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\ViewModels\\HistoryViewModel.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\HistoryViewModel.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\ViewModels\\HistoryViewModel.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAowJkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T13:45:27.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ContractorWindow.xaml",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ContractorWindow.xaml",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\ContractorWindow.xaml",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ContractorWindow.xaml",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\ContractorWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-12T13:24:35.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SettingsViewModel.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\SettingsViewModel.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\ViewModels\\SettingsViewModel.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\SettingsViewModel.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\ViewModels\\SettingsViewModel.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAADwvz8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T14:36:13.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SettingsWindow.xaml",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\SettingsWindow.xaml",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\SettingsWindow.xaml",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\SettingsWindow.xaml",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\SettingsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-12T14:36:41.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StatsViewModel.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\StatsViewModel.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\ViewModels\\StatsViewModel.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\StatsViewModel.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\ViewModels\\StatsViewModel.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAADwv1QAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T15:50:56.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "StatsWindow.xaml",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\StatsWindow.xaml",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\StatsWindow.xaml",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\StatsWindow.xaml",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\StatsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-12T15:51:17.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserWindow.xaml",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UserWindow.xaml",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\UserWindow.xaml",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UserWindow.xaml",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\UserWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-12T14:29:19.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PdfGenerator.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Services\\PdfGenerator.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\Services\\PdfGenerator.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Services\\PdfGenerator.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\Services\\PdfGenerator.cs",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAYwMsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T13:38:30.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UserEditorViewModel.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\UserEditorViewModel.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\ViewModels\\UserEditorViewModel.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\UserEditorViewModel.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\ViewModels\\UserEditorViewModel.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAADwvz8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T14:29:01.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAwwCgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T14:11:14.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\User.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\Models\\User.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\User.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T14:10:14.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Services\\AuthService.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\Services\\AuthService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAADwvyUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T14:10:47.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ContractorEditorViewModel.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\ContractorEditorViewModel.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\ViewModels\\ContractorEditorViewModel.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\ContractorEditorViewModel.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\ViewModels\\ContractorEditorViewModel.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAswDoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T13:24:11.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DocumentItem.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\DocumentItem.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\Models\\DocumentItem.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\DocumentItem.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\Models\\DocumentItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T12:21:42.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DocumentWindow.xaml",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\DocumentWindow.xaml",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\DocumentWindow.xaml",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\DocumentWindow.xaml",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\DocumentWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-12T12:42:07.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Contractor.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\Contractor.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\Models\\Contractor.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\Contractor.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\Models\\Contractor.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T13:22:03.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProductEditorViewModel.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\ProductEditorViewModel.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\ViewModels\\ProductEditorViewModel.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ViewModels\\ProductEditorViewModel.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\ViewModels\\ProductEditorViewModel.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAowHQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T12:59:39.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\MainWindow.xaml.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T11:57:01.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Document.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\Document.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\Models\\Document.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\Document.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\Models\\Document.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T12:21:28.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\Models\\Product.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\Product.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T12:33:06.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ProductWindow.xaml",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ProductWindow.xaml",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\ProductWindow.xaml",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ProductWindow.xaml",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\ProductWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-12T13:00:01.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ProductWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ProductWindow.xaml.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\ProductWindow.xaml.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\ProductWindow.xaml.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\ProductWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T13:00:12.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "DocumentWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\DocumentWindow.xaml.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\DocumentWindow.xaml.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\DocumentWindow.xaml.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\DocumentWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T12:42:21.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "StockLevel.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\StockLevel.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\Models\\StockLevel.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\StockLevel.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\Models\\StockLevel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T12:17:57.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UniaWarehouseManagementSystem",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-12T12:06:55.174Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+﻿<Window x:Class="UniaWarehouseManagementSystem.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:UniaWarehouseManagementSystem.ViewModels"
+        Title="Konfiguracja Firmy" Height="500" Width="400" ResizeMode="NoResize">
+
+    <Window.DataContext>
+        <vm:SettingsViewModel/>
+    </Window.DataContext>
+
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Dane Firmy (Nagłówek PDF)" FontSize="18" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Pełna Nazwa Firmy:" FontWeight="Bold"/>
+            <TextBox Text="{Binding CompanyName}" Padding="5" Margin="0,0,0,10"/>
+
+            <TextBlock Text="NIP:" FontWeight="Bold"/>
+            <TextBox Text="{Binding NIP}" Padding="5" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Ulica i Numer:" FontWeight="Bold"/>
+            <TextBox Text="{Binding Address}" Padding="5" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Kod Pocztowy i Miasto:" FontWeight="Bold"/>
+            <TextBox Text="{Binding City}" Padding="5" Margin="0,0,0,20"/>
+
+            <Button Content="ZAPISZ ZMIANY" Command="{Binding SaveCommand}" 
+                    Height="40" Background="#FF9800" Foreground="White" FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Window>
