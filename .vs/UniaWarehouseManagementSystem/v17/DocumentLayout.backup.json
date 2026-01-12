@@ -150,7 +150,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -183,6 +183,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Warehouse.cs",
+              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\Warehouse.cs",
+              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\Models\\Warehouse.cs",
+              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\Warehouse.cs",
+              "RelativeToolTip": "UniaWarehouseManagementSystem\\Models\\Warehouse.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T12:17:41.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\App.xaml",
@@ -204,19 +217,6 @@
               "ViewState": "AgIAAGsAAAAAAAAAAADwv4cAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-12T13:36:56.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Warehouse.cs",
-              "DocumentMoniker": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\Warehouse.cs",
-              "RelativeDocumentMoniker": "UniaWarehouseManagementSystem\\Models\\Warehouse.cs",
-              "ToolTip": "C:\\Dev\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\UniaWarehouseManagementSystem\\Models\\Warehouse.cs",
-              "RelativeToolTip": "UniaWarehouseManagementSystem\\Models\\Warehouse.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-12T12:17:41.219Z",
               "EditorCaption": ""
             },
             {
