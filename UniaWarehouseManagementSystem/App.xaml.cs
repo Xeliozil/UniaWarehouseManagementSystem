@@ -3,6 +3,7 @@ using System.Windows;
 using UniaWarehouseManagementSystem.Models;
 using UniaWarehouseManagementSystem.Services;
 using UniaWarehouseManagementSystem.ViewModels;
+using System.Linq; // Dodane dla czytelniejszego .Any()
 
 namespace UniaWarehouseManagementSystem
 {
@@ -10,6 +11,7 @@ namespace UniaWarehouseManagementSystem
     {
         public App()
         {
+            // Licencja darmowa dla biblioteki PDF
             QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
         }
 
@@ -20,12 +22,16 @@ namespace UniaWarehouseManagementSystem
             {
                 base.OnStartup(e);
 
-                // Tworzenie bazy
+                // Tworzenie/Inicjalizacja bazy danych SQLite
                 using (var context = new Data.UniaDbContext())
                 {
+                    // Ta linia stworzy plik UniaWarehouse.db, jeśli go nie ma
                     context.Database.EnsureCreated();
 
-                    if (!System.Linq.Enumerable.Any(context.Users))
+                    // --- SEEDOWANIE DANYCH (Domyślny Admin i Firma) ---
+
+                    // 1. Domyślny użytkownik (admin/admin)
+                    if (!context.Users.Any())
                     {
                         context.Users.Add(new Models.User
                         {
@@ -33,71 +39,37 @@ namespace UniaWarehouseManagementSystem
                             PasswordHash = Services.AuthService.HashPassword("admin"),
                             Role = "Admin"
                         });
-
-                        if (!System.Linq.Enumerable.Any(context.CompanyInfos))
-                        {
-                            context.CompanyInfos.Add(new Models.CompanyInfo
-                            {
-                                CompanyName = "Moja Firma",
-                                NIP = "-",
-                                Address = "-",
-                                City = "-"
-                            });
-                        }
+                        // Zapisujemy od razu, żeby mieć pewność
                         context.SaveChanges();
                     }
-                    // --- DODAJ TO: Ręczne tworzenie triggera dla SQLite ---
-                    // SQLite wymaga nieco innej składni niż MySQL (brak IF/ELSEIF wewnątrz triggera w prosty sposób,
-                    // często robi się oddzielne triggery lub używa składni CASE/WHEN w UPDATE).
-                    // Poniżej uproszczona wersja, która powinna zadziałać dla SQLite:
 
-                    try
+                    // 2. Domyślne dane firmy (puste)
+                    if (!context.CompanyInfos.Any())
                     {
-                        // Trigger dla PZ (Przyjęcie Zewnętrzne) - zwiększa stan
-                        context.Database.ExecuteSqlRaw(@"
-                            CREATE TRIGGER IF NOT EXISTS After_DocumentItem_Insert_PZ
-                            AFTER INSERT ON DocumentItems
-                            WHEN (SELECT DocType FROM Documents WHERE Id = NEW.DocumentId) = 'PZ'
-                            BEGIN
-                                INSERT INTO StockLevels (WarehouseId, ProductId, Quantity)
-                                SELECT TargetWarehouseId, NEW.ProductId, NEW.Quantity
-                                FROM Documents WHERE Id = NEW.DocumentId
-                                ON CONFLICT(WarehouseId, ProductId) DO UPDATE SET Quantity = Quantity + NEW.Quantity;
-                            END;
-                        ");
-
-                        // Trigger dla WZ (Wydanie Zewnętrzne) - zmniejsza stan
-                        context.Database.ExecuteSqlRaw(@"
-                            CREATE TRIGGER IF NOT EXISTS After_DocumentItem_Insert_WZ
-                            AFTER INSERT ON DocumentItems
-                            WHEN (SELECT DocType FROM Documents WHERE Id = NEW.DocumentId) = 'WZ'
-                            BEGIN
-                                UPDATE StockLevels 
-                                SET Quantity = Quantity - NEW.Quantity
-                                WHERE ProductId = NEW.ProductId 
-                                AND WarehouseId = (SELECT SourceWarehouseId FROM Documents WHERE Id = NEW.DocumentId);
-                            END;
-                        ");
-
-                        // Trigger dla MM (Przesunięcie) - wymagałby bardziej złożonej logiki, 
-                        // w SQLite lepiej obsłużyć MM w kodzie C# lub rozbić na dwa operacje (zdejmij/dodaj).
+                        context.CompanyInfos.Add(new Models.CompanyInfo
+                        {
+                            CompanyName = "Moja Firma",
+                            NIP = "-",
+                            Address = "-",
+                            City = "-"
+                        });
+                        context.SaveChanges();
                     }
-                    catch (System.Exception ex)
-                    {
-                        // Ignorujemy błędy jeśli triggery już istnieją lub coś poszło nie tak
-                        System.Diagnostics.Debug.WriteLine("Błąd tworzenia triggerów: " + ex.Message);
-                    }
+
+                    // UWAGA: USUNIĘTO TWORZENIE TRIGGERÓW
+                    // Logika aktualizacji stanów (PZ/WZ/MM) znajduje się teraz w DocumentEditorViewModel.cs
+                    // Dzięki temu unikamy podwójnego naliczania towarów (raz przez C#, raz przez SQL).
                 }
 
                 ShowLoginWindow();
             }
             catch (System.Exception ex)
             {
-                // JEŚLI COŚ PÓJDZIE NIE TAK, ZOBACZYSZ TEN KOMUNIKAT:
+                // JEŚLI COŚ PÓJDZIE NIE TAK (np. brak uprawnień do zapisu pliku .db), ZOBACZYSZ TEN KOMUNIKAT:
                 MessageBox.Show($"Błąd krytyczny przy starcie:\n\n{ex.Message}\n\n{ex.StackTrace}",
                                 "Fatal Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
-                // Zamykamy, bo i tak nie zadziała
+                // Zamykamy, bo i tak nie zadziała bez bazy
                 Shutdown();
             }
         }
@@ -116,11 +88,10 @@ namespace UniaWarehouseManagementSystem
             };
 
             // Co zrobić, jak ktoś kliknie "Wyjście" w oknie logowania? -> Zabij aplikację
-            // (Musimy to zrobić ręcznie, bo zmieniliśmy ShutdownMode na Explicit)
             loginWindow.Closed += (s, e) =>
             {
-                // Sprawdzamy czy okno zamknęło się po sukcesie (wtedy nic nie rób), 
-                // czy po prostu ktoś kliknął X (wtedy zamknij apkę)
+                // Sprawdzamy czy użytkownik jest zalogowany (czy okno zamknęło się po sukcesie)
+                // Jeśli nie jest zalogowany i okno się zamknęło -> znaczy, że kliknął X
                 if (AuthService.CurrentUser == null)
                 {
                     Shutdown();
@@ -151,7 +122,7 @@ namespace UniaWarehouseManagementSystem
             }
             else
             {
-                // Fallback (gdyby VM był tworzony ręcznie)
+                // Fallback (gdyby VM był tworzony ręcznie w XAML, a nie wstrzykiwany, choć tu robimy to w kodzie)
                 var vm = new MainViewModel();
                 vm.RequestLogoutAction = () =>
                 {
@@ -165,7 +136,7 @@ namespace UniaWarehouseManagementSystem
             // OBSŁUGA ZAMKNIĘCIA (X lub Alt+F4)
             mainWindow.Closed += (sender, args) =>
             {
-                // Jeśli okno się zamknęło, a NIE kliknięto "Wyloguj", to znaczy, że użytkownik chce wyjść.
+                // Jeśli okno się zamknęło, a NIE kliknięto "Wyloguj", to znaczy, że użytkownik chce wyjść z programu.
                 if (!isLoggingOut)
                 {
                     Shutdown(); // Zabij proces

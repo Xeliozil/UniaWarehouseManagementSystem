@@ -203,39 +203,93 @@ namespace UniaWarehouseManagementSystem.ViewModels
             {
                 using (var context = new UniaDbContext())
                 {
+                    // 1. Tworzymy nagłówek dokumentu
                     var newDoc = new Document
                     {
                         Number = DocumentNumber,
                         DocType = CurrentDocType,
                         DocDate = DateTime.Now,
-                        // Przypisujemy odpowiednie ID w zależności od tego, co jest wybrane
                         SourceWarehouseId = (CurrentDocType == "WZ" || CurrentDocType == "MM") ? SourceWarehouse.Id : null,
-                        TargetWarehouseId = (CurrentDocType == "PZ" || CurrentDocType == "MM") ? TargetWarehouse.Id : null
+                        TargetWarehouseId = (CurrentDocType == "PZ" || CurrentDocType == "MM") ? TargetWarehouse.Id : null,
+
+                        // --- POPRAWKA 1: ZAPIS KONTRAHENTA ---
+                        // Jeśli dokument to PZ lub WZ i wybrano kontrahenta, zapisujemy jego ID
+                        ContractorId = (CurrentDocType != "MM" && SelectedContractor != null) ? SelectedContractor.Id : null
                     };
 
                     context.Documents.Add(newDoc);
-                    await context.SaveChangesAsync();
+                    await context.SaveChangesAsync(); // Zapisz, żeby dostać ID dokumentu
 
+                    // 2. Przetwarzamy pozycje i AKTUALIZUJEMY STANY (zamiast triggerów)
                     foreach (var item in CartItems)
                     {
+                        // A. Dodaj pozycję do dokumentu
                         context.DocumentItems.Add(new DocumentItem
                         {
                             DocumentId = newDoc.Id,
                             ProductId = item.ProductId,
                             Quantity = item.Quantity
                         });
+
+                        // --- POPRAWKA 2: LOGIKA MAGAZYNOWA (C# zamiast Triggerów SQL) ---
+
+                        // OBSŁUGA ZMNIEJSZENIA STANU (Dla WZ i MM - zdejmujemy ze źródła)
+                        if (CurrentDocType == "WZ" || CurrentDocType == "MM")
+                        {
+                            var sourceStock = await context.StockLevels
+                                .FirstOrDefaultAsync(s => s.WarehouseId == SourceWarehouse.Id && s.ProductId == item.ProductId);
+
+                            if (sourceStock != null)
+                            {
+                                sourceStock.Quantity -= item.Quantity;
+                                // Opcjonalnie: walidacja, czy nie zeszło poniżej zera (choć robiliśmy to przy dodawaniu do koszyka)
+                            }
+                            else
+                            {
+                                // To teoretycznie nie powinno wystąpić dzięki walidacji AddToCart, ale warto zabezpieczyć
+                                context.StockLevels.Add(new StockLevel
+                                {
+                                    WarehouseId = SourceWarehouse.Id,
+                                    ProductId = item.ProductId,
+                                    Quantity = -item.Quantity // Ujemny stan
+                                });
+                            }
+                        }
+
+                        // OBSŁUGA ZWIĘKSZENIA STANU (Dla PZ i MM - dodajemy do celu)
+                        if (CurrentDocType == "PZ" || CurrentDocType == "MM")
+                        {
+                            var targetStock = await context.StockLevels
+                                .FirstOrDefaultAsync(s => s.WarehouseId == TargetWarehouse.Id && s.ProductId == item.ProductId);
+
+                            if (targetStock != null)
+                            {
+                                targetStock.Quantity += item.Quantity;
+                            }
+                            else
+                            {
+                                // Jeśli towaru nie ma w tym magazynie, tworzymy nowy wpis
+                                context.StockLevels.Add(new StockLevel
+                                {
+                                    WarehouseId = TargetWarehouse.Id,
+                                    ProductId = item.ProductId,
+                                    Quantity = item.Quantity
+                                });
+                            }
+                        }
                     }
+
+                    // Zapisz wszystkie zmiany (DokumentItems + StockLevels) w jednej transakcji
                     await context.SaveChangesAsync();
                 }
 
-                MessageBox.Show($"Zapisano dokument {CurrentDocType}!");
+                MessageBox.Show($"Zapisano dokument {CurrentDocType}!", "Sukces", MessageBoxButton.OK, MessageBoxImage.Information);
                 CloseAction?.Invoke();
             }
             catch (Exception ex)
             {
-                // ZMIANA: Wyciągamy "InnerException", czyli prawdziwy błąd MySQL
                 var realError = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
-                MessageBox.Show($"Szczegóły błędu:\n{realError}", "Błąd Bazy Danych", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Szczegóły błędu:\n{realError}", "Błąd Zapisu", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         // Tę metodę wywołujemy w SetMode
